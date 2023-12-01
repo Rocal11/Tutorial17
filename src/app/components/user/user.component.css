@@ -1,0 +1,16 @@
+h1{
+    color: red; 
+    font-size: 36px;
+    margin-top: 40px;      
+}
+p{
+
+    color: #a3a4eb;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.editable-div{
+    border: 1px solid #ccc;
+}

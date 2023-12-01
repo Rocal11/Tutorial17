@@ -1,0 +1,38 @@
+<section>
+<h1>Hola {{ username }}, tu eres un  {{ occupation }}!</h1>
+ @if(checkUser()) {
+    <p>Claro que existe, lo estoy viendo!</p>
+} @else {
+    <p>Tenemos dudas sobre su existencia</p>
+} 
+<h1>Prueba {{ checkUserText("Hola Jorge") }}</h1>
+<h2>Este es tu sistema operativo:</h2>
+<ul>
+@for(os of operatingSystems; track os.id) {
+    <li (mouseover)= "onMouseOver(os.name)">{{ os.name }}</li>
+}
+</ul>
+<div class="editable-div"[contentEditable]="isEditable">
+    
+</div>
+
+<button (click)="changeUser(username)">Mensaje al padre!</button>
+
+</section>
+<section>
+<ul>
+    <!-- Tus elementos de la lista aquí -->
+  </ul>
+  
+  <div class="editable-div" [contentEditable]="isEditable" #editableDiv>
+    <!-- Contenido editable -->
+  </div>
+
+  <button (click)="changeUser(editableDiv.innerText)">Mensaje</button>
+</section> 
+<!-- <h1> @for (let i = 0; i < 10; i++) {
+    {{ checkUserText("Hola Jorge") }}  Ejecutar 10 veces Check user Text 
+    <div [greet]="'User exists ' + username"></div>
+<input type="text" [(ngModel)]="username">
+<button (click)="changeUser(username)">Change User</button>
+    -->
